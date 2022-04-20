@@ -1,0 +1,12 @@
+<p>to-do-list works!</p>
+<app-to-do-item
+  *ngFor="let item of toDoList; let i = index"
+  [toDoValue]="item"
+  [clearList]="myClear"
+></app-to-do-item>
+<div class="new-task-input-container">
+  <input placeholder="New Task" class="new-task-input" #taskInput />
+  <button (click)="addToDoItem(taskInput.value)" class="add-button">
+    Submit
+  </button>
+</div>
